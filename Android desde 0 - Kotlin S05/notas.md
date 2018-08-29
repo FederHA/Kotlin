@@ -26,12 +26,26 @@ Crear un Layout para los ítems del recyclerView.
 
 Los componentes que serán dinámicos deberán tener un ID.
 
+NOTA: existen componentes nativos y de otras librerias. si se desea tener compativilidad con todas las versiones de android
+
   ```
-  <android.support.v7.widget.RecyclerView
+ <?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvEmpleados"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        
-  </android.support.v7.widget.RecyclerView>
+        android:layout_height="match_parent"
+        tools:listitem="@layout/empleado_item"
+        tools:itemCount="5">
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>
   
   ```
 
