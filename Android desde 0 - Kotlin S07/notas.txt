@@ -1,0 +1,1 @@
+SharedPreferences: Sirve para almacenar datos en formato XML
